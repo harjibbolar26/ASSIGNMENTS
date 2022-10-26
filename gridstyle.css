@@ -1,0 +1,88 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: hsl(0, 0%, 95%);
+    display: flex;
+    place-items: center;
+    height: 100vh;
+}
+main{
+    display: grid;
+    grid-template-areas: 
+    'a a b'
+    'c d d'
+    'c e e'
+    ;
+    grid-template-rows: 50% 22% 28%;
+    grid-template-columns: 30% 15% 27%;
+    gap: 10px;
+    width: 50%;
+    margin:auto;
+    height: 50vh;
+    
+}
+main div{
+    text-align: center;
+    padding: 1em;
+}
+.one{
+    background-color: #EB5020;
+    grid-area: a;
+}
+.two{
+    background-color: #FFA401;
+    grid-area: b;
+}
+.three{
+    background-color: #05AA42;
+    grid-area: c;
+}
+.four{
+    background-color: #01AEFD;
+    grid-area: d;
+    
+}
+.five{
+    background-color: #01AEFD;
+    grid-area: e;
+}
+.flex-btn{
+    background: #EB5020;
+    border-radius: 20px;
+    border: 1px solid hsl(0, 0%, 95%);
+    padding: 10px;
+    position: absolute;
+    bottom: 15%;
+    right: 38%;
+    font-size: 20px;
+    cursor: pointer;
+}
+.flex-btn:hover{
+    background: #FFA401
+}
+.flex-btn:active{
+    background: #01AEFD;
+}
+a{
+    text-decoration: none;
+    color: hsl(0, 0%, 95%);
+}
+
+@media screen and (max-width: 375px){
+    main{
+      max-width: 100%;
+      max-height: auto;
+    grid-template-areas: 
+      'a a'
+      'b b'
+      'c c'
+      'd e';
+      margin: auto;
+      grid-template-rows: 25%;
+      grid-template-columns: 40%;
+    }
+  }
